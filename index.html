@@ -21,8 +21,8 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:#fff;color:var(--td);font-family:'Poppins',sans-serif;overflow-x:hidden}
-section + section, section + footer{margin-top:-1px}
+body{background:#fff;color:var(--td);font-family:'Poppins',sans-serif;overflow-x:hidden;display:flex;flex-direction:column}
+body>*{flex-shrink:0}
 
 /* ── NAV (parently.ai style   always white) ── */
 nav {
@@ -138,7 +138,7 @@ nav {
 .btn-sec:hover { border-color:var(--pv);color:var(--pp) }
 
 /* ── phone mockup ── */
-.hero-right { display:flex;justify-content:center;align-items:flex-end;overflow:hidden;max-height:100% }
+.hero-right { display:flex;justify-content:center;align-items:flex-end }
 .phone-outer {
   width:260px;flex-shrink:0;
   background:#111;border-radius:42px;
@@ -213,7 +213,7 @@ nav {
 .ps-nav-dot.active { background:var(--pk);width:8px }
 
   /* ── DECK SECTION BASE ── */
-.deck-section{padding:7rem 0;position:relative;border:none;outline:none;box-shadow:none;margin-bottom:-2px;padding-bottom:calc(7rem + 2px)}
+.deck-section{padding:7rem 0;position:relative}
 .deck-section.bg-off{background:var(--bo)}
 .deck-section.bg-white{background:#fff}
 .deck-section.bg-dark{background:var(--td)}
@@ -462,13 +462,13 @@ nav {
 
 /* ── CTA ── */
 #cta{
-  padding:8rem 2rem;background:var(--grad);text-align:center;position:relative;overflow:hidden;margin-bottom:0;
+  padding:8rem 2rem;background:var(--grad);text-align:center;position:relative;overflow:hidden;
 }
-#cta + footer{margin-top:-2px}
 .cta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
 .cta-eyebrow{font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:1.25rem}
 #cta h2{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;color:#fff;letter-spacing:-0.03em;line-height:1.08;margin-bottom:1.1rem}
 #cta p{color:rgba(255,255,255,0.8);font-size:1rem;line-height:1.75;margin-bottom:3rem;font-weight:300}
+#cta .hero-btns{justify-content:center}
 .ctact{margin-top:1.75rem;font-size:0.78rem;color:rgba(255,255,255,0.55)}
 .ctact a{color:#fff;font-weight:600}
 
